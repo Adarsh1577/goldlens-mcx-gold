@@ -4,6 +4,14 @@ Hack in Hills '26, Track: Commodity Derivatives Intelligence.
 
 GoldLens compares the four MCX gold futures (GOLDM, GOLDTEN, GOLDGUINEA, GOLDPETAL) after normalising unit, quote base and purity to Rs per 10 g (999 basis). It flags unusual relative pricing quietly, tests a spread rule with a walk-forward backtest that charges costs, and reports honestly when there is nothing to find.
 
+## Team: Neural Nurture
+
+| Member | GitHub | Role |
+|---|---|---|
+| Adarsh Pratap Singh (team leader) | [@Adarsh1577](https://github.com/Adarsh1577) | Build lead: data pipeline, backtest, report, repo |
+| Aryan Singh | [@aryansinghwork031](https://github.com/aryansinghwork031) | Testing and validation |
+| Pranika Rana | [@pranika](https://github.com/pranika) | Pitch and documentation |
+
 ## Result on real data (1 Sep to 20 Oct 2026, 35 trading days)
 
 | | Rs |
@@ -25,6 +33,7 @@ GoldLens compares the four MCX gold futures (GOLDM, GOLDTEN, GOLDGUINEA, GOLDPET
 ## Files
 - `bhav_clean.py`: load and validate one Bhavcopy CSV, keep gold futures, normalise prices.
 - `goldlens.py`: spreads, z-scores, backtest, alerts, contract calendar.
+- `export_charts.py`: saves the report charts as PNG files for slides.
 - `report.py`: builds `report.html` (alerts, charts, backtest, cost sensitivity, calendar, limits).
 - `ingest_downloads.py`: copies downloaded Bhavcopy CSVs into `data/` named by the date inside each file.
 - `report.html`: the report generated from the run above.
